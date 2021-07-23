@@ -38,7 +38,11 @@ block content
                 style="width: 40px;"
               ) #[i(class=availabilityLabels[availability])]
             else
-              h5 #{availabilityLabels[availability]}
+              button(
+                class=`btn ${buttonStyles[availability]}`
+                style="width: 40px;"
+                disabled
+              ) #[i(class=availabilityLabels[availability])]
     tr
       th コメント
       each user in users
